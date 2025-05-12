@@ -1,0 +1,23 @@
+// @import 'variables';
+
+.filterContainer {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.filterInput {
+    padding: 12px 18px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-large;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 3px $focus-shadow-color;
+    }
+}
