@@ -1,6 +1,6 @@
 'use strict';
 import React from 'react';
-import styles from './UserCard/UserCard.scss';
+import styles from './UserCard.scss';
 /** @typedef {import('../models/User').User} User */
 
 /**

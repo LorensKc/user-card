@@ -1,5 +1,5 @@
 "use strict";
-import "../styles/globals.scss";
+import "./styles/globals.scss";
 
 export const metadata = {
   title: "User Cards",

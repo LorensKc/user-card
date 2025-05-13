@@ -2,9 +2,9 @@
 'use client';
 
 import { useEffect, useState, useMemo } from 'react';
-import userService from '../services/UserService';
-import UserGrid from '../components/UserGrid/UserGrid';
-import FilterInput from '../components/FilterInput/FilterInput';
+import userService from './services/UserService.js';
+import UserGrid from './components/UserGrid/UserGrid';
+import FilterInput from './components/FilterInput/FilterInput';
 
 const HomePage = () => {
   const [users, setUsers] = useState([]);

@@ -1,7 +1,7 @@
 'use strict';
 import React from 'react';
 import UserCard from './UserCard';
-import styles from './UserGrid/UserGrid.scss';
+import styles from './UserGrid.scss';
 /** @typedef {import('../models/User').User} User */
 
 /**

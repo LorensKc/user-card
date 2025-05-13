@@ -1,6 +1,6 @@
 'use strict';
 import React from 'react';
-import styles from './FilterInput/FilterInput.scss';
+import styles from './FilterInput.scss';
 
 /**
  * @param {object} props
