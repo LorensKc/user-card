@@ -1,4 +1,6 @@
-.grid {
+@import '../../styles/variables';
+
+.grid-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
@@ -13,12 +15,12 @@
 
 /* Адаптивність */
 @media (max-width: 768px) {
-    .grid {
+    .grid-wrapper {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
 }
 
 @media (max-width: 480px) {
-    .grid {
+    .grid-wrapper {
         grid-template-columns: 1fr;
     } }

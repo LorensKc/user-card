@@ -9,7 +9,7 @@ import styles from './UserCard.scss';
  */
 const UserCard = ({ user }) => {
   return (
-    <div className={styles.card}>
+    <div className="card-wrapper">
       <h2>{user.name} (@{user.username})</h2>
       <p><strong>Email:</strong> <a href={`mailto:${user.email}`}>{user.email}</a></p>
       <p><strong>Phone:</strong> {user.phone}</p>

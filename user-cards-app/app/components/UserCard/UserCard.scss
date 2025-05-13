@@ -1,6 +1,6 @@
-// @import 'variables';
+@import '../../styles/variables';
 
-.card {
+.card-wrapper {
     background-color: $card-background;
     border-radius: $border-radius-normal;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

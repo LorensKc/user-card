@@ -1,6 +1,6 @@
 'use strict';
 import React from 'react';
-import UserCard from './UserCard';
+import UserCard from '../UserCard/UserCard';
 import styles from './UserGrid.scss';
 /** @typedef {import('../models/User').User} User */
 
@@ -14,7 +14,7 @@ const UserGrid = ({ users }) => {
   }
 
   return (
-    <div className={styles.grid}>
+    <div className="grid-wrapper">
       {users.map((user) => (
         <UserCard key={user.id} user={user} />
       ))}

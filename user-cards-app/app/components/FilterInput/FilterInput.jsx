@@ -10,10 +10,10 @@ import styles from './FilterInput.scss';
  */
 const FilterInput = ({ value, onChange, placeholder = "User Filter..." }) => {
   return (
-    <div className={styles.filterContainer}>
+    <div className="filter-container">
       <input
         type="text"
-        className={styles.filterInput}
+        className="filter-input "
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
