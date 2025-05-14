@@ -1,6 +1,6 @@
 'use strict';
 import React from 'react';
-import styles from './UserCard.scss';
+import './UserCard.scss';
 /** @typedef {import('../models/User').User} User */
 
 /**
@@ -13,12 +13,13 @@ const UserCard = ({ user }) => {
       <h2>{user.name} (@{user.username})</h2>
       <p><strong>Email:</strong> <a href={`mailto:${user.email}`}>{user.email}</a></p>
       <p><strong>Phone:</strong> {user.phone}</p>
-      <p><strong>Wedsite:</strong> <a href={`http://${user.website}`} target="_blank" rel="noopener noreferrer">{user.website}</a></p>
+      <p><strong>Website:</strong> <a href={`http://${user.website}`} target="_blank" rel="noopener noreferrer">{user.website}</a></p>
       <p>
         <strong>Address:</strong> {user.address.street}, {user.address.suite}, {user.address.city}, {user.address.zipcode}
       </p>
       <p><strong>Company:</strong> {user.company.name}</p>
       <p><em>"{user.company.catchPhrase}"</em></p>
+      <p><em>"{user.company.bs}"</em></p>
     </div>
   );
 };

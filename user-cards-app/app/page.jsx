@@ -9,14 +9,26 @@ import FilterInput from './components/FilterInput/FilterInput';
 const HomePage = () => {
   const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchAndSetUsers = async () => {
-      const fetchedUsers = await userService.fetchUsers();
-      setUsers(fetchedUsers);
+      setIsLoading(true); //Starting the download
+      setError(null); //Resetting the previous error
+      try {
+        const fetchedUsers = await userService.fetchUsers();
+        setUsers(fetchedUsers);
+      } catch (err) {
+        console.error("Failed to fetch users:", err);
+        setError(err.message || 'Failed to fetch users');
+        setUsers([]); //Clean up users in case of an error
+      } finally {
+        setIsLoading(false); //Completing the download (successful or not)
+      }
     };
     fetchAndSetUsers();
-  }, []);
+  }, []); //The empty array of dependencies remains
 
   const handleFilterChange = (value) => {
     setSearchTerm(value);
@@ -51,6 +63,13 @@ const HomePage = () => {
   useEffect(() => {
     document.title = 'Clients List';
   }, []);
+
+  if(isLoading) {
+    return <main className="container"><p>Loading users...</p></main>
+  }
+  if(error) {
+    return <main className="container"><p>Error: {error}</p></main>
+  }
 
 
   return (

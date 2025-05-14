@@ -1,12 +1,12 @@
 'use strict';
 import React from 'react';
-import styles from './FilterInput.scss';
+import './FilterInput.scss';
 
-/**
- * @param {object} props
- * @param {string} props.value
- * @param {(value: string) => void} props.onChange
- * @param {string} [props.placeholder]
+/** //Component of the input field for filtering.
+ * @param {object} props //Component props.
+ * @param {string} props.value //The current value of the field.
+ * @param {(value: string) => void} props.onChange //Function-handler for changing the value.
+ * @param {string} [props.placeholder] //Placeholder text for the field.
  */
 const FilterInput = ({ value, onChange, placeholder = "User Filter..." }) => {
   return (

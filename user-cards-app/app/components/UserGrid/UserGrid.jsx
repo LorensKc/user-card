@@ -1,7 +1,7 @@
 'use strict';
 import React from 'react';
 import UserCard from '../UserCard/UserCard';
-import styles from './UserGrid.scss';
+import './UserGrid.scss';
 /** @typedef {import('../models/User').User} User */
 
 /**
@@ -10,7 +10,7 @@ import styles from './UserGrid.scss';
  */
 const UserGrid = ({ users }) => {
   if (!users || users.length === 0) {
-    return <p className={styles.noResults}>No users found</p>;
+    return <p className="noResults">No users found</p>;
   }
 
   return (
