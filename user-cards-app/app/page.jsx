@@ -60,10 +60,6 @@ const HomePage = () => {
     });
   }, [users, searchTerm]);
 
-  useEffect(() => {
-    document.title = 'Clients List';
-  }, []);
-
   if(isLoading) {
     return <main className="container"><p>Loading users...</p></main>
   }
